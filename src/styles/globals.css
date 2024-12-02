@@ -1,0 +1,297 @@
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 30px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.main{
+  height: 540px;
+}
+
+/* General Dark Mode */
+body.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+body.dark-mode .header {
+  background-color: #1e1e1e;
+}
+
+/* Header Styles */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* -----header-title----- */
+.header-title{
+  color: #0a56b5;
+  font-weight: 50px;
+}
+
+
+/* Icons Section */
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon-container {
+  position: relative;
+}
+
+/* Profile Avatar */
+.profile-avatar {
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 50px;
+  height: 50px;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  list-style: none;
+  padding: 10px;
+  margin: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+body.dark-mode .dropdown-menu {
+  background-color: #333;
+  border: 1px solid #555;
+  color: #fff;
+}
+
+.dropdown-menu li {
+  padding: 10px 15px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f0;
+}
+
+body.dark-mode .dropdown-menu li:hover {
+  background-color: #444;
+}
+
+/* Profile Dropdown Styling */
+.profile-dropdown li:first-child {
+  font-size: 14px;
+  padding: 15px;
+  background-color: #f7f7f7;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+}
+
+body.dark-mode .profile-dropdown li:first-child {
+  background-color: #444;
+  border-bottom: 1px solid #555;
+}
+
+
+/* Dark Mode */
+body.dark-mode .header {
+  background-color: #1e1e1e;
+  border-color: #555;
+}
+
+body.dark-mode .header-title {
+  color: #fff;
+}
+
+/* --------searchbar-------- */
+
+.InputContainer {
+  width: 210px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    to bottom,
+    rgb(227, 213, 255),
+    rgb(255, 231, 231)
+  );
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.input {
+  width: 200px;
+  height: 40px;
+  border: none;
+  outline: none;
+  caret-color: rgb(255, 81, 0);
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  padding-left: 15px;
+  letter-spacing: 0.8px;
+  color: rgb(19, 19, 19);
+  font-size: 13.4px;
+}
+
+/* ------toggle---------- */
+
+
+.container{
+  
+}
+
+
+.label {
+  height: 40px;
+  width: 100px;
+  background-color: #ffffff;
+  border-radius: 30px;
+  -webkit-box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 5px 4px rgba(255, 255, 255, 1),
+    inset 0 0 20px 1px rgba(0, 0, 0, 0.488), 10px 20px 30px rgba(0, 0, 0, 0.096),
+    inset 0 0 0 3px rgba(0, 0, 0, 0.3);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  -webkit-transition: -webkit-transform 0.4s;
+  transition: -webkit-transform 0.4s;
+  transition: transform 0.4s;
+}
+
+.label:hover {
+  -webkit-transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+  transform: perspective(100px) rotateX(5deg) rotateY(-5deg);
+}
+
+#checkbox:checked ~ .label:hover {
+  -webkit-transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+  transform: perspective(100px) rotateX(-5deg) rotateY(5deg);
+}
+
+#checkbox {
+  display: none;
+}
+
+#checkbox:checked ~ .label::before {
+  left: 70px;
+  background-color: #000000;
+  background-image: linear-gradient(315deg, #000000 0%, #414141 70%);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.label::before {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: #0a56b5;
+  background-image: #0a56b5 ;
+  left: 10px;
+  -webkit-box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3),
+    10px 10px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 1px rgba(0, 0, 0, 0.3), 10px 10px 10px rgba(0, 0, 0, 0.3);
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+
+
+/* Footer Styles */
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fff; /* Matches the header background */
+  color: #555;
+  font-size: 14px;
+  padding: 20px 30px;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Adds shadow similar to the header */
+  margin-top: auto; /* Pushes footer to the bottom */
+}
+
+/* Dark Mode for Footer */
+body.dark-mode .footer {
+  background-color: #1e1e1e; /* Dark mode background */
+  color: #fff; /* Adjust text color */
+  border-color: #555; /* Dark border */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Dark mode shadow */
+}
+
+/* Ensure content stretches between header and footer */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height for flexbox layout */
+}
+
+.content {
+  flex: 1;
+  padding: 20px; /* Adds spacing to the content area */
+}
+
+
+@media (max-width: 768px) {
+
+  .InputContainer{
+    height: 50px;
+    width: 100px;
+  }
+  .input{
+    width: 90px;
+    height: 40px;
+  }
+  .header-title{
+    display: none;
+  }
+
+  .header-title{
+    font-size: 15px;
+  }
+
+  .label{
+    width: 100px;
+  }
+}
+
+
+
